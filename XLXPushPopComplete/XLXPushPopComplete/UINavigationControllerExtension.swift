@@ -19,7 +19,7 @@ extension UINavigationController {
     }
     
     // Returns the popped controller
-    open func popViewController(animated: Bool, complete:@escaping ()->()) -> UIViewController? {
+    open func popViewController(animated: Bool, complete:(()->Void)? = nil) -> UIViewController? {
         let poppedViewController:UIViewController?
         
         CATransaction.setCompletionBlock(complete)
