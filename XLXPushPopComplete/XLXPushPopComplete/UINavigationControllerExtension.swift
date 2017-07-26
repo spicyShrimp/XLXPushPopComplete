@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
     
     // Uses a horizontal slide transition. Has no effect if the view controller is already in the stack.
-    open func pushViewController(_ viewController: UIViewController, animated: Bool, complete:@escaping ()->()) {
+    open func pushViewController(_ viewController: UIViewController, animated: Bool, complete:(()->Void)? = nil) {
         CATransaction.setCompletionBlock(complete)
         CATransaction.begin()
         pushViewController(viewController, animated: animated)
@@ -30,7 +30,7 @@ extension UINavigationController {
     }
     
     // Pops view controllers until the one specified is on top. Returns the popped controllers.
-    open func popToViewController(_ viewController: UIViewController, animated: Bool, complete:@escaping ()->()) -> [UIViewController]? {
+    open func popToViewController(_ viewController: UIViewController, animated: Bool, complete:(()->Void)? = nil) -> [UIViewController]? {
         let viewControllers:[UIViewController]?
         
         CATransaction.setCompletionBlock(complete)
@@ -42,7 +42,7 @@ extension UINavigationController {
     }
     
     // Pops until there's only a single view controller left on the stack. Returns the popped controllers.
-    open func popToRootViewController(animated: Bool, complete:@escaping ()->()) -> [UIViewController]? {
+    open func popToRootViewController(animated: Bool, complete:(()->Void)? = nil) -> [UIViewController]? {
         let viewControllers:[UIViewController]?
         
         CATransaction.setCompletionBlock(complete)

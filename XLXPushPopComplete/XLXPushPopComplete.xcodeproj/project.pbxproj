@@ -56,13 +56,13 @@
 		5633A3A21F286E5100B94631 /* XLXPushPopComplete */ = {
 			isa = PBXGroup;
 			children = (
+				5633A3B51F286E6C00B94631 /* UINavigationControllerExtension.swift */,
 				5633A3A31F286E5100B94631 /* AppDelegate.swift */,
 				5633A3A51F286E5100B94631 /* ViewController.swift */,
 				5633A3A71F286E5100B94631 /* Main.storyboard */,
 				5633A3AA1F286E5100B94631 /* Assets.xcassets */,
 				5633A3AC1F286E5100B94631 /* LaunchScreen.storyboard */,
 				5633A3AF1F286E5100B94631 /* Info.plist */,
-				5633A3B51F286E6C00B94631 /* UINavigationControllerExtension.swift */,
 			);
 			path = XLXPushPopComplete;
 			sourceTree = "<group>";
@@ -314,6 +314,7 @@
 				5633A3B41F286E5100B94631 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
