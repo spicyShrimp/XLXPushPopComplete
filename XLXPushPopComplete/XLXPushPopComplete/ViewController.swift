@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     @IBAction func pushAction() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "ViewController")
-        navigationController?.pushViewController(vc, animated: true, complete: {
+        navigationController?.pushViewController(vc, animated: true) {
             print("push complete")
-        })
+        }
     }
     
     @IBAction func popAction() {
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
             return
         }
         
-        _ = navigationController?.popViewController(animated: true, complete: {
+        _ = navigationController?.popViewController(animated: true) {
             print("pop complete")
-        })
+        }
     }
 }
 
